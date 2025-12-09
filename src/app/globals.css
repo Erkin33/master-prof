@@ -24,3 +24,10 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+body, html{
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
