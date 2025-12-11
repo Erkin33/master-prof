@@ -199,7 +199,7 @@ export default function Header() {
               </a>
 
               <a
-                href="#"
+                href="https://t.me/rustambek875"
                 className="block text-center px-4 py-2 rounded-md border border-[#ffd98c] text-[#7a5a00] font-medium"
                 onClick={(e) => {
                   e.preventDefault();
