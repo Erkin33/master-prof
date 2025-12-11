@@ -165,7 +165,7 @@ export default function Works() {
                     }}
                   >
                     <a
-                      href="tel:+998900621818"
+                      href="tel:+998931994960"
                       style={{
                         background: "#ffc11e",
                         color: "#111827",
@@ -185,7 +185,7 @@ export default function Works() {
                     </a>
 
                     <a
-                      href="https://t.me/BigMaster_uzb"
+                      href="https://t.me/rustambek875"
                       target="_blank"
                       rel="noreferrer"
                       style={{

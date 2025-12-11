@@ -30,10 +30,10 @@ export default function ContactsNoJSX(): React.ReactElement {
 
   const root = React.createElement(
     "div",
-    { className: "max-w-[1200px] w-full flex mx-auto mb-[50px]" },
+    { className: "max-w-[1200px] w-full flex mx-auto mb-[50px] bg-white" },
     React.createElement(
       "div",
-      { className: "w-full", id:"contacts"},
+      { className: "w-full", id: "contacts" },
       React.createElement(
         "div",
         { className: "mx-auto w-full flex justify-center" },
@@ -46,7 +46,7 @@ export default function ContactsNoJSX(): React.ReactElement {
             { className: "mb-4" },
             React.createElement(
               "h2",
-              { className: "text-2xl md:text-3xl font-semibold text-gray-700" },
+              { className: "text-2xl md:text-3xl font-semibold text-black" },
               "Контакты"
             )
           ),
@@ -74,17 +74,17 @@ export default function ContactsNoJSX(): React.ReactElement {
                 href: telegramHref,
                 target: "_blank",
                 rel: "nofollow noopener noreferrer",
-                className: "text-base text-gray-800 hover:text-yellow-500 no-underline",
+                className: "text-base text-black hover:text-black no-underline",
                 "aria-label": `Перейти в Telegram ${telegramHandle}`,
               },
               telegramHandle
             )
           ),
 
-          // Address block
+          // Address block (texts black)
           React.createElement(
             "div",
-            { className: "text-gray-600 text-sm md:text-base mb-6 space-y-0" },
+            { className: "text-black text-sm md:text-base mb-6 space-y-0" },
             React.createElement("div", null, "г. Ташкент"),
             React.createElement("div", null, "Миробадский район Массив Куйлюк, 1"),
             React.createElement("div", null, "ул. Муниса, 21")
@@ -101,7 +101,7 @@ export default function ContactsNoJSX(): React.ReactElement {
                 target: "_blank",
                 rel: "nofollow noopener noreferrer",
                 className:
-                  "inline-flex items-center justify-center w-12 h-12 rounded-full bg-black hover:bg-yellow-400 transition-colors",
+                  "inline-flex items-center justify-center w-12 h-12 rounded-full bg-black hover:bg-black transition-colors",
                 "aria-label": `Telegram ${telegramHandle}`,
                 title: "Telegram",
               },
