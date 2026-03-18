@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-
+const trackConversion = () => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18020252228/Rsw9CNvYi4scEMT03JBD'
+    });
+  }
+};
 export default function ContactsNoJSX(): React.ReactElement {
   const phone = "+998 93 199 49 60";
   const phoneHref = "tel:+998931994960";
@@ -62,6 +68,7 @@ export default function ContactsNoJSX(): React.ReactElement {
                 "a",
                 {
                   href: phoneHref,
+                  onClick: trackConversion,
                   className: "text-lg md:text-xl font-extrabold text-black no-underline",
                   "aria-label": `Позвонить ${phone}`,
                 },
@@ -73,6 +80,7 @@ export default function ContactsNoJSX(): React.ReactElement {
               {
                 href: telegramHref,
                 target: "_blank",
+                onClick: trackConversion,
                 rel: "nofollow noopener noreferrer",
                 className: "text-base text-black hover:text-black no-underline",
                 "aria-label": `Перейти в Telegram ${telegramHandle}`,
@@ -99,6 +107,7 @@ export default function ContactsNoJSX(): React.ReactElement {
               {
                 href: telegramHref,
                 target: "_blank",
+                onClick: trackConversion,
                 rel: "nofollow noopener noreferrer",
                 className:
                   "inline-flex items-center justify-center w-12 h-12 rounded-full bg-black hover:bg-black transition-colors",
