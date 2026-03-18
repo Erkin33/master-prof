@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-
+const trackConversion = () => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18020252228/Rsw9CNvYi4scEMT03JBD'
+    });
+  }
+};
 type WorkItem = {
   title: string;
   price: string;
@@ -166,6 +172,7 @@ export default function Works() {
                   >
                     <a
                       href="tel:+998931994960"
+                      onClick={trackConversion}
                       style={{
                         background: "#ffc11e",
                         color: "#111827",
@@ -186,6 +193,7 @@ export default function Works() {
 
                     <a
                       href="https://t.me/rustambek875"
+                      onClick={trackConversion}
                       target="_blank"
                       rel="noreferrer"
                       style={{
