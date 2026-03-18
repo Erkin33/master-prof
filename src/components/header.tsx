@@ -1,7 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-
+const trackConversion = () => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18020252228/Rsw9CNvYi4scEMT03JBD'
+    });
+  }
+};
 const links = [
   { text: "Преимущества", href: "#plus" },
   { text: "Сантехника", href: "#hero" },
@@ -79,13 +85,14 @@ export default function Header() {
         <div className="w-auto h-full flex justify-between items-center">
 
           {/* PHONE (desktop only) */}
-          <a href="tel:+998931994960" className="font-[800] text-[24px] text-[#ffc11e] max-[1200px]:hidden">
+          <a href="tel:+998931994960" className="font-[800] text-[24px] text-[#ffc11e] max-[1200px]:hidden" onClick={trackConversion}>
             +998 93 199 49 60
           </a>
 
           {/* MAIN BUTTON */}
           <a
             href="tel:+998931994960"
+            onClick={trackConversion}
             className="w-[206px] max-[400px]:hidden h-[40px] max-[600px]:w-[146px] flex justify-center items-center ml-[25px] bg-[#ffc11e] rounded-[10px] text-white text-[14px]"
           >
             Заказать мастера 24/7
@@ -148,7 +155,7 @@ export default function Header() {
           </nav>
 
           <div className="mt-6">
-            <a href="tel:+998931994960" className="text-[#ffc11e] font-semibold block">
+            <a href="tel:+998931994960" className="text-[#ffc11e] font-semibold block" onClick={trackConversion}>
               +998 93 199 49 60
             </a>
 
@@ -156,6 +163,7 @@ export default function Header() {
 
               <a
                 href="tel:+998931994960"
+                onClick={trackConversion}
                 className="block text-center px-4 py-2 rounded-md bg-[#ffc11e] text-white font-medium"
               >
                 Заказать мастера
@@ -163,6 +171,7 @@ export default function Header() {
 
               <a
                 href="https://t.me/rustambek875"
+                
                 className="block text-center px-4 py-2 rounded-md border border-[#ffd98c] text-[#7a5a00] font-medium"
               >
                 Написать в Telegram 24/7
