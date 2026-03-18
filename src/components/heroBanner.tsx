@@ -1,7 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-
+const trackConversion = () => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag('event', 'conversion', {
+      send_to: 'AW-18020252228/Rsw9CNvYi4scEMT03JBD'
+    });
+  }
+};
 /**
  * HeroBanner без JSX — сохранить как HeroBanner.nojsx.tsx
  */
@@ -101,6 +107,7 @@ export default function HeroBannerNoJSX(): React.ReactElement {
           "a",
           {
             href: "tel:+998935286601",
+            onClick: trackConversion,
             className: "btn-primary relative overflow-hidden inline-flex items-center justify-center rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,0.25)]",
             "aria-label": "+998935286601",
           },
@@ -117,6 +124,7 @@ export default function HeroBannerNoJSX(): React.ReactElement {
           {
             href: "tel:+998931994960",
             target: "_blank",
+            onClick: trackConversion,
             rel: "noreferrer",
             className: "btn-outline relative overflow-hidden inline-flex items-center justify-center rounded-[10px] shadow-[0_10px_20px_rgba(0,0,0,0.18)]",
             "aria-label": "+998931994960",
